@@ -115,7 +115,7 @@ function App() {
                     },
                     body: JSON.stringify(params)
                 };
-                fetch("https://api.openai-sb.com/v1/chat/completions", requestOptions)
+                fetch("https://api.openai.com/v1/chat/completions", requestOptions)
                     .then(response => {
                         if (!response.ok) {
                             switch (response.status) {
@@ -148,7 +148,7 @@ function App() {
                             },
                             body: JSON.stringify(params1)
                         };
-                        const response1 = await fetch("https://api.openai-sb.com/v1/chat/completions", requestOptions1);
+                        const response1 = await fetch("https://api.openai.com/v1/chat/completions", requestOptions1);
                         const responseJson1 = await response1.json();
                         const { choices: choices1 } = responseJson1;
                         const text1 = choices1[0].message.content;
@@ -170,7 +170,7 @@ function App() {
                             },
                             body: JSON.stringify(params2)
                         };
-                        const response2 = await fetch("https://api.openai-sb.com/v1/chat/completions", requestOptions2);
+                        const response2 = await fetch("https://api.openai.com/v1/chat/completions", requestOptions2);
                         const responseJson2 = await response2.json();
                         const { choices: choices2 } = responseJson2;
                         const text2 = choices2[0].message.content;
@@ -192,7 +192,7 @@ function App() {
                             },
                             body: JSON.stringify(params3)
                         };
-                        const response3 = await fetch("https://api.openai-sb.com/v1/chat/completions", requestOptions3);
+                        const response3 = await fetch("https://api.openai.com/v1/chat/completions", requestOptions3);
                         const responseJson3 = await response3.json();
                         const { choices: choices3 } = responseJson3;
                         const text3 = choices3[0].message.content;
@@ -235,7 +235,7 @@ function App() {
                     },
                     body: JSON.stringify(params)
                 };
-                fetch('https://api.openai-sb.com/v1/chat/completions', requestOptions)
+                fetch('https://api.openai.com/v1/chat/completions', requestOptions)
                     .then(response => {
                         if (!response.ok) {
                             switch (response.status) {
