@@ -1,0 +1,13 @@
+Given a knowledge graph represented as a set of triples in the form of (subject, relation, object), indicating that there is a relation between subject and object. Firstly, please understand the content and structure of the entire knowledge graph, learn about the content of each node in the graph and the relationships described between the nodes. Then, you need to identify any potentially anomalous nodes in the graph and return an updated list.
+
+If no anomalies are found, return an empty list;
+If anomalies are found, return a list of all suspicious anomalous nodes.
+
+Note: Your output result is always a list. If no anomalies are found, output an empty list. If anomalies are detected, output a list of all suspicious anomalous nodes.
+
+For example:
+Knowledge Graph: [["Kramer", "father", "Elaine"], ["Kramer", "father", "George"]]
+Updated:
+["Kramer"]
+Knowledge Graph: $knowledge_graph
+Updated:

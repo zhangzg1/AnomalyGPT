@@ -1,0 +1,14 @@
+Given a knowledge graph represented as a set of triples in the form of (subject, relation, object), indicating that there is a relation between subject and object. Then, I will provide you with a list of suspicious anomalous nodes in the graph.
+
+If the list I give you is empty, it means there are no anomalous nodes in the graph;
+If the list I give you is not empty, you need to analyze each node in the list one by one. First, you need to retrieve all triples in the triple set that contain the first node, then put the obtained triples into a list, and then perform the same analysis for the second node...
+
+Note: Please pay attention to the output format of the following example. If the list I give you is empty, you only need to output an empty set. If the list I give you is not empty, the output should be a set with keys as the nodes in the list and values as all the triples obtained about that node.
+
+For example:
+Knowledge Graph: [["Kramer", "father", "Elaine"], ["Kramer", "father", "George"], ["James", "son", "Kitty"]]
+Anomaly List: ["Kramer"]
+Update: {"Kramer": [["Kramer", "father", "Elaine"], ["Kramer", "father", "George"]]}
+Knowledge Graph: $knowledge_graph
+Anomaly List: $node_list
+Update:

@@ -1,0 +1,15 @@
+Given a knowledge graph represented as a set of triples in the form of (subject, relation, object), indicating that there is a relation between subject and object. Then, I will provide you with a collection of suspicious anomalous nodes.
+
+If the collection I give you is empty, it means there are no anomalous nodes in the graph;
+If the collection I give you is not empty, you need to analyze each node in the collection and determine whether the node is anomalous based on the list of triples corresponding to each node. For anomalous nodes, you need to mark them as red (represented in hexadecimal).
+
+Note: Please pay attention to the output format and content in the following example. If the collection I provide is empty, you only need to output the triples of the original knowledge graph. If the collection I provide is not empty, add the mark of the nodes judged to be anomalous to the triples of the original knowledge graph. Do not add marks for nodes judged to be normal, and remember not to delete the triple content from the original knowledge graph.
+
+For example:
+Knowledge Graph: [["Kramer", "father", "Elaine"], ["Kramer", "father", "George"], ["James", "son", "Kitty"]]
+Suspicious Nodes Collection: {"Kramer": [["Kramer", "father", "Elaine"], ["Kramer", "father", "George"]]}
+Update based on the original knowledge graph: [["Kramer", "father", "Elaine"], ["Kramer", "father", "George"], ["James", "son", "Kitty"], ["Kramer", "#FF0000"]]
+
+Knowledge Graph: $knowledge_graph
+Suspicious Nodes Collection: $node_set
+Update based on the original knowledge graph:
