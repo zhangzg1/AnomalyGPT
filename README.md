@@ -1,1 +1,1 @@
-# AnomalyLLM
+# AnomalyGPT
