@@ -1,14 +1,33 @@
 # AnomalyGPT
+
 ## Introduce
 
-The project made some improvements based on [GraphGPT](https://github.com/varunshenoy/GraphGPT). The original GraphGPT transforms natural language into a knowledge graph and displays it. On this basis, after the knowledge graph is generated, I designed some prompts to interact with ChatGPT to detect if there are any anomalous nodes in the knowledge graph. If anomalies are detected, the node is marked in red, and finally, the knowledge graph after anomaly detection is displayed.
+The project has made some improvements based on [GraphGPT](https://github.com/varunshenoy/GraphGPT). Users can not only input text content in the input box on the page but also upload files (supporting txt, md, docx, pdf, csv, xlsx file types). The original GraphGPT can convert natural language into a knowledge graph and display it. Building on this, after the knowledge graph is generated, I designed some prompts to interact with ChatGPT to detect if there are any anomalous nodes in the knowledge graph. If anomalies are detected, the node is marked in red, and finally, the knowledge graph after anomaly detection is displayed.
 
-## Prompts
-
-Prompts are located in the `public/prompts` folder, On the basis of the original prompt, prompts for graph anomaly detection have also been added.
+In addition, AnomalyGPT can not only detect graph anomaly nodes in text graphs but also perform graph anomaly node detection for financial datasets such as anti-money laundering by targeting account transaction networks. By uploading transaction datasets, AnomalyGPT will detect anomalous accounts and visualize the entire account transaction network.
 
 ## Setup
 
-1. Run `npm install` to download required dependencies (currently just [react-graph-vis](https://github.com/crubier/react-graph-vis)).
-2. Make sure you have an [OpenAI API key](https://platform.openai.com/account/api-keys). You will enter this into the web app when running queries.
-3. Run `npm run start`. GraphGPT should open up in a new browser tab.
+1. Environment（Linux）
+
+   ```
+   git clone https://github.com/zhangzg1/AnomalyGPT.git
+   conda create -n anomalygpt python=3.9
+   conda activate anomalygpt
+   pip install -r requirements.txt 
+   ```
+
+2. Backend
+
+   ```
+   cd backend
+   python api_core.py
+   ```
+
+3. Frontend
+
+   ```
+   cd frontend
+   npm install
+   npm run start
+   ```
