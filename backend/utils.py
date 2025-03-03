@@ -11,7 +11,7 @@ ChatGPT_PARAMS = {
 
 
 async def request(prompt: str, api_key: str):
-    url = "https://api.openai-sb.com/v1/chat/completions"
+    url = "https://api.openai.com/v1/chat/completions"
     headers = {
         "Content-Type": "application/json",
         "Authorization": "Bearer " + api_key
